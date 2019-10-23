@@ -2,10 +2,10 @@
 {
   "name" : "wyamltools",
   "version" : "0.3.0",
-  "description" : "___",
+  "description" : "Collection of tools to manipulate yaml files",
   "author" : "Kostiantyn Wandalen <wanalen@willbe.so>",
   "license" : "MIT",
-  "main" : "proto/dwtools/amid/___",
+  "main" : "proto/dwtools/amid/l3/yaml/IncludeMid.s",
   "files" :
   [
     "proto/dwtools/amid",

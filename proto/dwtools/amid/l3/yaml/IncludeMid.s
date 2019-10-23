@@ -1,0 +1,20 @@
+( function _IncludeMid_s_( ) {
+
+'use strict';
+
+/**
+ * Collection of tools to manipulate yaml files.
+  @module Tools/mid/NpmTools
+*/
+
+if( typeof module !== 'undefined' )
+{
+
+  let _ = require( '../../../Tools.s' );
+
+  require( './IncludeBase.s' );
+  require( './l1/Tools.s' );
+
+}
+
+})();
