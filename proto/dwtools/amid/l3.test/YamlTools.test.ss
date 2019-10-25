@@ -4,11 +4,9 @@
 
 if( typeof module !== 'undefined' )
 {
-  let _ = require( '../../../Tools.s' );
-
+  let _ = require( '../../Tools.s' );
   _.include( 'wTesting' );
-
-  require( '../../l3/npm/IncludeMid.s' );
+  require( '../l3/yaml/IncludeMid.s' );
 }
 
 //
@@ -30,6 +28,8 @@ function onSuiteBegin( test )
 
 }
 
+//
+
 function onSuiteEnd( test )
 {
   let context = this;
@@ -41,6 +41,32 @@ function onSuiteEnd( test )
 // --
 // tests
 // --
+
+function trivial( test )
+{
+
+  var src =
+`
+
+about :
+  name : some name
+  version : 0.0.0
+
+path :
+  in : .
+  out : out
+
+`
+
+  var exp =
+  {
+    'line' : '  in : .',
+    'pre' : '  ',
+  }
+  var got = _.yaml.lineFind( src, 'in' );
+  test.contains( got, exp );
+
+}
 
 // --
 // declare
@@ -63,6 +89,7 @@ var Proto =
 
   tests :
   {
+    trivial,
   },
 
 }

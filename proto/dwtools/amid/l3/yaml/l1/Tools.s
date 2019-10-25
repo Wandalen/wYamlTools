@@ -9,7 +9,7 @@ if( typeof module !== 'undefined' )
 
 }
 
-let _ = wTools;
+let _ = _global_.wTools;
 let Self = _.yaml = _.yaml || Object.create( null );
 
 // --
