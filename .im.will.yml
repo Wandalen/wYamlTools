@@ -13,6 +13,9 @@ submodule :
   wAppBasic :
     path : npm:///wappbasic
     enabled : 0 # submodule
+  yaml :
+    path : npm:///yaml
+    enabled : 0 # submodule
 
 path :
 
