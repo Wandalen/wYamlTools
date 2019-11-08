@@ -6,8 +6,8 @@ consistency:
     hash: 5c640ffb4a6fbb8dd28e7bad766d297e
     size: 1712
   ../.im.will.yml: &ref_1
-    hash: 8c77c4b78a93051f25af6a1c522763bc
-    size: 4806
+    hash: 55639b2bcbc5cd86808b3de4881c279e
+    size: 4880
 module:
   wYamlTools.out:
     about:
@@ -59,9 +59,6 @@ module:
       download:
         criterion:
           predefined: 1
-      remote:
-        criterion:
-          predefined: 1
       repository:
         path: 'git+https:///github.com/Wandalen/wYamlTools.git'
       origins:
@@ -75,7 +72,11 @@ module:
       out:
         path: .
       temp:
-        path: 'path::out'
+        path:
+          - 'path::out'
+          - ../package-lock.json
+          - ../package.json
+          - ../node_modules
       proto:
         path: ../proto
       export:
@@ -140,11 +141,13 @@ module:
         path: '{path::out.*=}/source/Index.s'
       exported.dir.proto.export:
         criterion:
+          generated: 1
           content: proto
           export: 1
         path: ../proto
       exported.files.proto.export:
         criterion:
+          generated: 1
           content: proto
           export: 1
         path:
@@ -327,6 +330,7 @@ module:
           prefixPath: ../proto
         mandatory: 1
         criterion:
+          generated: 1
           content: proto
           export: 1
       exported.files.proto.export:
@@ -339,6 +343,7 @@ module:
         recursive: 0
         mandatory: 1
         criterion:
+          generated: 1
           content: proto
           export: 1
     step:
@@ -824,9 +829,6 @@ module:
       download:
         criterion:
           predefined: 1
-      remote:
-        criterion:
-          predefined: 1
       repository:
         path: 'git+https:///github.com/Wandalen/wYamlTools.git'
       origins:
@@ -840,13 +842,17 @@ module:
       out:
         path: out
       temp:
-        path: 'path::out'
+        path:
+          - 'path::out'
+          - package-lock.json
+          - package.json
+          - node_modules
       proto:
-        path: ./proto
+        path: proto
       export:
         path: '{path::proto}/**'
       doc:
-        path: ./doc
+        path: doc
       out.raw.debug:
         criterion:
           debug: debug
@@ -1464,5 +1470,5 @@ module:
         hash: 5c640ffb4a6fbb8dd28e7bad766d297e
         size: 1712
       ../.im.will.yml:
-        hash: 8c77c4b78a93051f25af6a1c522763bc
-        size: 4806
+        hash: 55639b2bcbc5cd86808b3de4881c279e
+        size: 4880
