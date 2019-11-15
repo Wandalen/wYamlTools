@@ -16,7 +16,7 @@
   {
     "url" : "https ://github.com/Wandalen/wYamlTools/issues"
   }, 
-  "dependencies" : { "wTools" : "" }, 
+  "dependencies" : { "wTools" : "", "yaml" : "" }, 
   "devDependencies" : { "wTesting" : "" }, 
   "keywords" : [ "wTools" ]
 }
