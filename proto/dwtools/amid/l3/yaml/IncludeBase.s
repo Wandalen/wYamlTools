@@ -2,9 +2,10 @@
 
 'use strict';
 
+/* yaml */
+
 if( typeof module !== 'undefined' )
 {
-
 
   let _ = require( '../../../Tools.s' );
 
