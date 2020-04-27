@@ -1,22 +1,22 @@
 {
-  "name" : "wyamltools", 
-  "version" : "0.3.50", 
-  "description" : "Collection of tools to manipulate yaml files", 
-  "author" : "Kostiantyn Wandalen <wanalen@willbe.so>", 
-  "license" : "MIT", 
-  "main" : "proto/dwtools/amid/l3/yaml/IncludeMid.s", 
-  "files" : [ "proto/dwtools/amid", "proto/dwtools/Tools.s" ], 
-  "scripts" : { "test" : "wtest .run proto", "docgen" : "wdocgen .build proto" }, 
-  "repository" : 
+  "name" : "wyamltools",
+  "version" : "0.3.51",
+  "description" : "Collection of tools to manipulate yaml files",
+  "author" : "Kostiantyn Wandalen <wanalen@willbe.so>",
+  "license" : "MIT",
+  "main" : "proto/dwtools/amid/l3/yaml/IncludeMid.s",
+  "files" : [ "proto/dwtools/amid", "proto/dwtools/Tools.s" ],
+  "scripts" : { "test" : "wtest .run proto", "docgen" : "wdocgen .build proto" },
+  "repository" :
   {
-    "type" : "git", 
+    "type" : "git",
     "url" : "https ://github.com/Wandalen/wYamlTools.git"
-  }, 
-  "bugs" : 
+  },
+  "bugs" :
   {
     "url" : "https ://github.com/Wandalen/wYamlTools/issues"
-  }, 
-  "dependencies" : { "wTools" : "alpha", "yaml" : "1.9.2" }, 
-  "devDependencies" : { "wTesting" : "alpha" }, 
+  },
+  "dependencies" : { "wTools" : "gamma", "yaml" : "1.9.2" },
+  "devDependencies" : { "wTesting" : "gamma" },
   "keywords" : [ "wTools" ]
 }
