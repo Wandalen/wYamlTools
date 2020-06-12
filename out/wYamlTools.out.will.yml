@@ -3,8 +3,8 @@ root:
   - wYamlTools.out
 consistency:
   ../.ex.will.yml: &ref_0
-    hash: 524ffaab36157c4002a49fc9dcb00875
-    size: 1712
+    hash: 98cc255d3beeb8f8de371c5b05b18c93
+    size: 1713
   ../.im.will.yml: &ref_1
     hash: 3bc6cf54e6ccb2304c5c7280134db0ef
     size: 4938
@@ -1458,8 +1458,8 @@ module:
           - 'build::npm'
     consistency:
       ../.ex.will.yml:
-        hash: 524ffaab36157c4002a49fc9dcb00875
-        size: 1712
+        hash: 98cc255d3beeb8f8de371c5b05b18c93
+        size: 1713
       ../.im.will.yml:
         hash: 3bc6cf54e6ccb2304c5c7280134db0ef
         size: 4938
