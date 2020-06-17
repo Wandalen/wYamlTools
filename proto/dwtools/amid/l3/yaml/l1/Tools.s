@@ -5,7 +5,7 @@
 if( typeof module !== 'undefined' )
 {
 
-  require( '../IncludeBase.s' );
+  require( '../include/Base.s' );
 
 }
 
