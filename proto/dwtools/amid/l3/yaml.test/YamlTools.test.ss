@@ -4,9 +4,9 @@
 
 if( typeof module !== 'undefined' )
 {
-  let _ = require( '../../../dwtools/Tools.s' );
+  let _ = require( '../../../../dwtools/Tools.s' );
   _.include( 'wTesting' );
-  require( '../l3/yaml/IncludeMid.s' );
+  require( '../yaml/include/Mid.s' );
 }
 
 //
