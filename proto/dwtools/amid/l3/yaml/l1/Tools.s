@@ -1,4 +1,5 @@
-( function _Tools_s_( ) {
+( function _Tools_s_( )
+{
 
 'use strict';
 
@@ -11,7 +12,7 @@ if( typeof module !== 'undefined' )
 
 let _ = _global_.wTools;
 let Self = _.yaml = _.yaml || Object.create( null );
-let Yaml,YamlTypes;
+let Yaml, YamlTypes;
 
 // --
 // inter
@@ -148,7 +149,7 @@ defaults.config = null;
 defaults.setMap = null;
 defaults.asDocument = false; //for testing
 
-
+//
 
 function configFileEdit( o )
 {
