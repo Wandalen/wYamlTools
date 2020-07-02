@@ -1,5 +1,4 @@
-
-# wYamlTools [![Build Status](https://travis-ci.org/Wandalen/wYamlTools.svg?branch=master)](https://travis-ci.org/Wandalen/wYamlTools)
+# wYamlTools [![Status](https://github.com/Wandalen/wYamlTools/workflows/Test/badge.svg)](https://github.com/Wandalen/wYamlTools/actions?query=workflow%3ATest)
 
 Collection of tools to manipulate yaml files
 
