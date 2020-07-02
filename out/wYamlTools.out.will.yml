@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wYamlTools.out
 consistency:
-  wYamlTools.out.will.yml: &ref_0
-    hash: a76a41a71a53e1b7cf3e87b6cce500c2
-    size: 38000
-  ../.ex.will.yml: &ref_1
-    hash: 98cc255d3beeb8f8de371c5b05b18c93
+  ../.ex.will.yml: &ref_0
+    hash: 45058a2bbf7a6a18bfe9feb2d9b49ae1
     size: 1713
-  ../.im.will.yml: &ref_2
-    hash: 3bc6cf54e6ccb2304c5c7280134db0ef
-    size: 4938
+  ../.im.will.yml: &ref_1
+    hash: 6e6ac358f7496204099f1c242435af1b
+    size: 4948
 module:
   wYamlTools.out:
     about:
@@ -19,19 +16,19 @@ module:
       description: Collection of tools to manipulate yaml files
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - tools
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wyamltools
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -67,7 +64,7 @@ module:
       origins:
         path:
           - 'git+https:///github.com/Wandalen/wYamlTools.git'
-          - 'npm:///wYamlTools'
+          - 'npm:///wyamltools'
       bugtracker:
         path: 'https:///github.com/Wandalen/wYamlTools/issues'
       in:
@@ -113,7 +110,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: ../proto/dwtools/amid/l3/yaml/include/Mid.s
+        path: ../proto/dwtools/amid/l3/yaml/entry/YamlTools.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -123,13 +120,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/include/Mid.s'
+        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/entry/YamlTools.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/include/Mid.s'
+        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/entry/YamlTools.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
@@ -155,18 +152,22 @@ module:
           export: 1
         path:
           - ../proto
+          - ../proto/Integration.test.s
           - ../proto/dwtools
           - ../proto/dwtools/Tools.s
           - ../proto/dwtools/abase
           - ../proto/dwtools/amid
           - ../proto/dwtools/amid/l3
           - ../proto/dwtools/amid/l3/yaml
+          - ../proto/dwtools/amid/l3/yaml/entry
+          - ../proto/dwtools/amid/l3/yaml/entry/YamlTools.s
+          - ../proto/dwtools/amid/l3/yaml/include
           - ../proto/dwtools/amid/l3/yaml/include/Base.s
           - ../proto/dwtools/amid/l3/yaml/include/Mid.s
           - ../proto/dwtools/amid/l3/yaml/l1
           - ../proto/dwtools/amid/l3/yaml/l1/Tools.s
-          - ../proto/dwtools/amid/l3.test
-          - ../proto/dwtools/amid/l3.test/YamlTools.test.ss
+          - ../proto/dwtools/amid/l3/yaml.test
+          - ../proto/dwtools/amid/l3/yaml.test/YamlTools.test.ss
           - ../proto/dwtools/atop
     submodule:
       wTools:
@@ -602,7 +603,7 @@ module:
           debug: release
       reflect.proto.debug.raw:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.debug.raw'
         criterion:
           tests: no.tests
           debug: debug
@@ -612,7 +613,7 @@ module:
           - files.reflect
       reflect.proto.release.raw:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.release.raw'
         criterion:
           tests: no.tests
           debug: release
@@ -622,7 +623,7 @@ module:
           - files.reflect
       reflect.proto.debug.compiled:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.debug.compiled'
         criterion:
           tests: no.tests
           debug: debug
@@ -632,7 +633,7 @@ module:
           - files.reflect
       reflect.proto.release.compiled:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.release.compiled'
         criterion:
           tests: no.tests
           debug: release
@@ -643,7 +644,7 @@ module:
       transpile.proto.raw:
         opts:
           entry: 'path::entry.proto.no.tests'
-          filePath: 'reflector::transpile.proto.raw*'
+          filePath: 'reflector::transpile.proto.raw'
         criterion:
           raw: raw
           debug: release
@@ -653,7 +654,7 @@ module:
       transpile.proto.no.tests.compiled.debug:
         opts:
           entry: 'path::entry.proto.*=1'
-          filePath: 'reflector::transpile.proto.no.tests.compiled*'
+          filePath: 'reflector::transpile.proto.no.tests.compiled.debug'
         criterion:
           tests: no.tests
           raw: compiled
@@ -664,7 +665,7 @@ module:
       transpile.proto.no.tests.compiled.release:
         opts:
           entry: 'path::entry.proto.*=1'
-          filePath: 'reflector::transpile.proto.no.tests.compiled*'
+          filePath: 'reflector::transpile.proto.no.tests.compiled.release'
         criterion:
           tests: no.tests
           raw: compiled
@@ -676,7 +677,7 @@ module:
         opts:
           entry: 'path::entry.proto.*=1'
           external.before: '{path::out.*=1}/Main.s'
-          filePath: 'reflector::transpile.proto.only.tests.compiled*'
+          filePath: 'reflector::transpile.proto.only.tests.compiled.debug'
         criterion:
           tests: only.tests
           raw: compiled
@@ -688,7 +689,7 @@ module:
         opts:
           entry: 'path::entry.proto.*=1'
           external.before: '{path::out.*=1}/Main.s'
-          filePath: 'reflector::transpile.proto.only.tests.compiled*'
+          filePath: 'reflector::transpile.proto.only.tests.compiled.release'
         criterion:
           tests: only.tests
           raw: compiled
@@ -696,24 +697,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -802,9 +785,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wYamlTools.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wYamlTools
@@ -812,21 +794,13 @@ module:
       description: Collection of tools to manipulate yaml files
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - tools
-        - wTools
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
+      contributors: *ref_4
       npm.name: wyamltools
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -860,7 +834,7 @@ module:
       origins:
         path:
           - 'git+https:///github.com/Wandalen/wYamlTools.git'
-          - 'npm:///wYamlTools'
+          - 'npm:///wyamltools'
       bugtracker:
         path: 'https:///github.com/Wandalen/wYamlTools/issues'
       in:
@@ -906,7 +880,7 @@ module:
       entry.proto.no.tests:
         criterion:
           tests: no.tests
-        path: proto/dwtools/amid/l3/yaml/include/Mid.s
+        path: proto/dwtools/amid/l3/yaml/entry/YamlTools.s
       entry.proto.only.tests:
         criterion:
           tests: only.tests
@@ -916,13 +890,13 @@ module:
           debug: debug
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/include/Mid.s'
+        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/entry/YamlTools.s'
       entry.out.raw.debug.release:
         criterion:
           debug: release
           raw: raw
           content: prime
-        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/include/Mid.s'
+        path: '{path::out.*=1}/source/dwtools/amid/l3/yaml/entry/YamlTools.s'
       entry.out.compiled.debug.debug:
         criterion:
           debug: debug
@@ -1488,11 +1462,8 @@ module:
           - 'build::npm'
     consistency:
       ../.ex.will.yml:
-        hash: 98cc255d3beeb8f8de371c5b05b18c93
+        hash: 45058a2bbf7a6a18bfe9feb2d9b49ae1
         size: 1713
       ../.im.will.yml:
-        hash: 3bc6cf54e6ccb2304c5c7280134db0ef
-        size: 4938
-      wYamlTools.out.will.yml:
-        hash: a76a41a71a53e1b7cf3e87b6cce500c2
-        size: 38000
+        hash: 6e6ac358f7496204099f1c242435af1b
+        size: 4948
