@@ -5,5 +5,5 @@ Collection of tools to manipulate yaml files
 ## Try out
 ```
 npm install
-node sample/Sample.js
+node sample/Sample.s
 ```
