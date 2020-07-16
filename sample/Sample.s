@@ -1,5 +1,5 @@
 
-var _ = require( '..' );
+let _ = require( '..' );
 var src =
 `
 
