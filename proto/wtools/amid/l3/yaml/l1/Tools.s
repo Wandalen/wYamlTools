@@ -179,7 +179,7 @@ defaults.filePath = null;
 // declare
 // --
 
-let Extend =
+let Extension =
 {
 
   lineFind,
@@ -190,7 +190,7 @@ let Extend =
 
 }
 
-_.mapExtend( Self, Extend );
+_.mapExtend( Self, Extension );
 
 //
 
