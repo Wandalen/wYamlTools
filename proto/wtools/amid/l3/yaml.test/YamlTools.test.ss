@@ -62,7 +62,7 @@ path :
   var exp =
   {
     'line' : '  in : .',
-    'pre' : '  ',
+    'head' : '  ',
   }
   var got = _.yaml.lineFind( src, 'in' );
   test.contains( got, exp );

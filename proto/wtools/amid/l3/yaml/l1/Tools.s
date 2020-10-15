@@ -29,7 +29,7 @@ function lineFind( src, ins )
   return null;
 
   r.line = match[ 0 ].replace( '\n', '' ).replace( '\n', '' );
-  r.pre = match[ 1 ];
+  r.head = match[ 1 ];
   r.before = src.substring( 0, match.index );
   r.after = src.substring( match.index + match[ 0 ].length );
 
@@ -49,7 +49,7 @@ function commentOut( content, name )
   let before = content.substring( 0, match.index );
   let after = content.substring( match.index + match[ 0 ].length );
   let inside = match[ 0 ].replace( '\n', '' ).replace( '\n', '' );
-  let pre = match[ 1 ];
+  let head = match[ 1 ];
   let result = before;
 
   add( inside );
@@ -65,12 +65,12 @@ function commentOut( content, name )
       add( line );
       continue;
     }
-    if( line.length <= pre.length )
+    if( line.length <= head.length )
     {
       close( line );
       break;
     }
-    if( line.charCodeAt( pre.length+1 ) > 32 )
+    if( line.charCodeAt( head.length+1 ) > 32 )
     {
       close( line );
       break;
@@ -90,7 +90,7 @@ function commentOut( content, name )
   function add( line )
   {
     line = line.replace( /^\s*/, '' );
-    result += `\n${pre}# ${line}`;
+    result += `\n${head}# ${line}`;
   }
 }
 
