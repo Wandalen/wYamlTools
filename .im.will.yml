@@ -4,14 +4,8 @@ submodule :
   wTools :
     path : npm:///wTools
     enabled : 0 # submodule
-  wCopyable :
-    path : npm:///wCopyable
-    enabled : 0 # submodule
   wFiles :
     path : npm:///wFiles
-    enabled : 0 # submodule
-  wProcess :
-    path : npm:///wprocess
     enabled : 0 # submodule
   yaml :
     path : npm:///yaml
