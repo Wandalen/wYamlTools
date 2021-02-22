@@ -1,22 +1,36 @@
 {
-  "name" : "wyamltools",
-  "version" : "0.3.117",
-  "description" : "Collection of tools to manipulate yaml files",
-  "author" : "Kostiantyn Wandalen <wanalen@01.school>",
-  "license" : "MIT",
-  "main" : "proto/wtools/amid/l3/yaml/entry/YamlTools.s",
-  "files" : [ "proto/wtools/amid", "proto/wtools/Tools.s" ],
-  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https ://github.com/Wandalen/wYamlTools.git"
+  "name": "wyamltools",
+  "version": "0.3.118",
+  "description": "Collection of tools to manipulate yaml files",
+  "author": "Kostiantyn Wandalen <wanalen@01.school>",
+  "license": "MIT",
+  "main": "proto/wtools/amid/l3/yaml/entry/YamlTools.s",
+  "files": [
+    "proto/wtools/amid",
+    "proto/wtools/Tools.s"
+  ],
+  "scripts": {
+    "test": "wtest .run 'proto/**' rapidity:-3",
+    "docgen": "wdocgen .build proto"
   },
-  "bugs" :
-  {
-    "url" : "https ://github.com/Wandalen/wYamlTools/issues"
+  "repository": {
+    "type": "git",
+    "url": "https ://github.com/Wandalen/wYamlTools.git"
   },
-  "dependencies" : { "wTools" : "", "wFiles" : "", "yaml" : "" },
-  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0", "wyamltools" : "file:." },
-  "keywords" : [ "wTools" ]
+  "bugs": {
+    "url": "https ://github.com/Wandalen/wYamlTools/issues"
+  },
+  "dependencies": {
+    "wTools": "alpha",
+    "wFiles": "alpha",
+    "yaml": "1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "7.1.0",
+    "wTesting": "alpha",
+    "wyamltools": "file:."
+  },
+  "keywords": [
+    "wTools"
+  ]
 }
