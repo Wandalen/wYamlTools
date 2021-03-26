@@ -10,8 +10,8 @@ if( typeof module !== 'undefined' )
 
 }
 
-let _ = _global_.wTools;
-let Self = _.yaml = _.yaml || Object.create( null );
+const _ = _global_.wTools;
+const Self = _.yaml = _.yaml || Object.create( null );
 let Yaml, YamlTypes;
 
 // --
@@ -159,7 +159,7 @@ function configFileEdit( o )
   if( !_.fileProvider.isTerminal( o.filePath ) )
   throw _.err( 'configFileEdit expects yaml file at path:', o.filePath );
 
-  let o2 = _.mapOnly( o, configEdit.defaults );
+  let o2 = _.mapOnly_( null, o, configEdit.defaults );
   o2.config = _.fileProvider.fileRead( o.filePath );
 
   return this.configEdit( o2 );
