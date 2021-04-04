@@ -4,7 +4,7 @@
   "description" : "Collection of tools to manipulate yaml files",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
-  "main" : "proto/wtools/amid/l3/yaml/entry/YamlTools.s",
+  "main" : "proto/node_modules/wyamltools",
   "files" : [ "proto/wtools/amid", "proto/wtools/Tools.s", "proto/node_modules" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
   "repository" :

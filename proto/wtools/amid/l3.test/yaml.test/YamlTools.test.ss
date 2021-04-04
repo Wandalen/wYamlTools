@@ -7,7 +7,7 @@ if( typeof module !== 'undefined' )
 {
   let _ = require( '../../../../wtools/Tools.s' );
   _.include( 'wTesting' );
-  require( '../yaml/include/Mid.s' );
+  require( '../../l3/yaml/include/Mid.s' );
 }
 
 //
