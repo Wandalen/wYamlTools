@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wYamlTools.out
 consistency:
-  wYamlTools.out.will.yml: &ref_0
-    hash: e4130cfe5996152911c596d5055cbfb8
-    size: 38432
-  ../.ex.will.yml: &ref_1
+  ../.ex.will.yml: &ref_0
     hash: 45058a2bbf7a6a18bfe9feb2d9b49ae1
     size: 1713
-  ../.im.will.yml: &ref_2
-    hash: 04fb98ae62522cd4d47424cb2971d3b1
-    size: 4881
+  ../.im.will.yml: &ref_1
+    hash: 553b4ac5ddc8d9188538602be9349534
+    size: 4835
 module:
   wYamlTools.out:
     about:
@@ -19,19 +16,19 @@ module:
       description: Collection of tools to manipulate yaml files
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - tools
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wyamltools
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -700,24 +697,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -806,9 +785,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wYamlTools.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wYamlTools
@@ -816,21 +794,13 @@ module:
       description: Collection of tools to manipulate yaml files
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - tools
-        - wTools
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
+      contributors: *ref_4
       npm.name: wyamltools
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -1492,8 +1462,5 @@ module:
         hash: 45058a2bbf7a6a18bfe9feb2d9b49ae1
         size: 1713
       ../.im.will.yml:
-        hash: 04fb98ae62522cd4d47424cb2971d3b1
-        size: 4881
-      wYamlTools.out.will.yml:
-        hash: e4130cfe5996152911c596d5055cbfb8
-        size: 38432
+        hash: 553b4ac5ddc8d9188538602be9349534
+        size: 4835
