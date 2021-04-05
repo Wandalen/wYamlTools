@@ -68,8 +68,8 @@ path:
       raw: compiled
       content: prime
   npm.proto.entry:
-    - /pro/module/wYamlTools/proto/wtools/amid/l3/yaml/entry/YamlTools.s
-    - /pro/module/wYamlTools/proto/node_modules/wyamltools
+    - proto/wtools/amid/l3/yaml/entry/YamlTools.s
+    - proto/node_modules/wyamltools
 reflector:
   reflect.proto:
     inherit: predefined.*
