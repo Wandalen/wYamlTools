@@ -6,10 +6,10 @@
 if( typeof module !== 'undefined' )
 {
 
-  let _ = require( '../../../../../node_modules/Tools' );
+  const _ = require( '../../../../../node_modules/Tools' );
 
   require( './Base.s' );
-  require( '../l1/Tools.s' );
+  require( 'Tools' );
 
 }
 
