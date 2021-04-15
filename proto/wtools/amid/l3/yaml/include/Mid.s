@@ -1,4 +1,4 @@
-( function _Mid_s_( )
+( function _Mid_s_()
 {
 
 'use strict';
@@ -9,7 +9,8 @@ if( typeof module !== 'undefined' )
   const _ = require( '../../../../../node_modules/Tools' );
 
   require( './Base.s' );
-  require( 'Tools' );
+  require( '../l1/Tools.s' );
+  // require( 'Tools' );
 
 }
 
