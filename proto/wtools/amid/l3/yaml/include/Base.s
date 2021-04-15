@@ -1,4 +1,4 @@
-( function _Base_s_( )
+( function _Base_s_()
 {
 
 'use strict';
