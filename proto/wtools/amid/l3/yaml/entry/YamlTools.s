@@ -1,4 +1,4 @@
-( function _YamlTools_s_( )
+( function _YamlTools_s_()
 {
 
 'use strict';
