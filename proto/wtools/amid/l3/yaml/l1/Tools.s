@@ -99,7 +99,7 @@ function commentOut( content, name )
 function configEdit( o )
 {
   _.assert( arguments.length === 1 );
-  _.routineOptions( configEdit, o );
+  _.routine.options_( configEdit, o );
 
   _.assert( _.strDefined( o.config ) );
   _.assert( _.mapIs( o.setMap ) );
@@ -153,7 +153,7 @@ defaults.asDocument = false; //for testing
 
 function configFileEdit( o )
 {
-  _.routineOptions( configFileEdit, o );
+  _.routine.options_( configFileEdit, o );
   _.assert( _.strDefined( o.filePath ) );
 
   if( !_.fileProvider.isTerminal( o.filePath ) )
@@ -190,7 +190,7 @@ let Extension =
 
 }
 
-_.mapExtend( Self, Extension );
+_.props.extend( Self, Extension );
 
 //
 
