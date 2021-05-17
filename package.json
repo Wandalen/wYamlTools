@@ -1,6 +1,6 @@
 {
   "name" : "wyamltools",
-  "version" : "0.3.139",
+  "version" : "0.3.140",
   "description" : "Collection of tools to manipulate yaml files",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
@@ -16,7 +16,7 @@
   {
     "url" : "https ://github.com/Wandalen/wYamlTools/issues"
   },
-  "dependencies" : { "wTools" : "", "wFiles" : "", "yaml" : "" },
-  "devDependencies" : { "wTesting" : "", "eslint" : "7.1.0" },
+  "dependencies" : { "wTools" : "delta", "wFiles" : "delta", "yaml" : "1.10.2" },
+  "devDependencies" : { "eslint" : "7.1.0", "wTesting" : "delta" },
   "keywords" : [ "wTools" ]
 }
