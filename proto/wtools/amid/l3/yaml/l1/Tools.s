@@ -11,7 +11,7 @@ if( typeof module !== 'undefined' )
 }
 
 const _ = _global_.wTools;
-const Self = _.yaml = _.yaml || Object.create( null );
+_.yaml = _.yaml || Object.create( null );
 let Yaml, YamlTypes;
 
 // --
@@ -190,7 +190,7 @@ let Extension =
 
 }
 
-_.props.extend( Self, Extension );
+/* _.props.extend */Object.assign( _.yaml, Extension );
 
 //
 
