@@ -1,11 +1,11 @@
 {
   "name" : "wyamltools",
-  "version" : "0.3.143",
+  "version" : "0.3.144",
   "description" : "Collection of tools to manipulate yaml files",
   "author" : "Kostiantyn Wandalen <wanalen@01.school>",
   "license" : "MIT",
   "main" : "proto/node_modules/wyamltools",
-  "files" : [ "proto/wtools/amid/l3/yaml", "proto/node_modules" ],
+  "files" : [ "proto/wtools/amid/l3/yaml", "proto/node_modules", "proto/node_modules/Tools", "proto/node_modules/wyamltools" ],
   "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen .build proto" },
   "repository" :
   {
