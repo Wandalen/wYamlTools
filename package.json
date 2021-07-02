@@ -1,6 +1,6 @@
 {
   "name": "wyamltools",
-  "version": "0.3.145",
+  "version": "0.3.146",
   "description": "Collection of tools to manipulate yaml files",
   "author": "Kostiantyn Wandalen <wanalen@01.school>",
   "license": "MIT",
@@ -24,11 +24,11 @@
   },
   "dependencies": {
     "yaml": "1.10.2",
-    "wTools": "gamma",
-    "wFiles": "gamma"
+    "wTools": "stable",
+    "wFiles": "stable"
   },
   "devDependencies": {
-    "wTesting": "gamma",
+    "wTesting": "stable",
     "eslint": "7.1.0"
   },
   "keywords": [
