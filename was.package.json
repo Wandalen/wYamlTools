@@ -1,6 +1,6 @@
 {
   "name": "wyamltools",
-  "version": "0.3.175",
+  "version": "0.3.176",
   "description": "Collection of tools to manipulate yaml files",
   "author": "Kostiantyn Wandalen <wandalen@obox.systems>",
   "license": "MIT",
