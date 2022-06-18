@@ -1,6 +1,6 @@
 {
   "name": "wyamltools",
-  "version": "0.3.179",
+  "version": "0.3.180",
   "description": "Collection of tools to manipulate yaml files",
   "author": "Kostiantyn Wandalen <wandalen@obox.systems>",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "url": "https ://github.com/Wandalen/wYamlTools/issues"
   },
   "dependencies": {
-    "yaml": "2.1.0",
+    "yaml": "2.1.1",
     "wTools": "latest",
     "wFiles": "latest"
   },
